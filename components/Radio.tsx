@@ -19,12 +19,12 @@ const Radio = ({label, name, value, checked, onChange}: RadioProps) => {
                 className="rounded-full"
                 type="radio"
                 name={name}
-                id="radio"
+                id={`${name}-${value}`}
                 value={value}
                 checked={checked}
                 onChange={() => onChange(value)}
             />
-            <label htmlFor="radio">{label}</label>
+            <label htmlFor={`${name}-${value}`}>{label}</label>
         </div>
     );
 };
