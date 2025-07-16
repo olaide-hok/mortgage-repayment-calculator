@@ -16,7 +16,7 @@ const Button = ({label, type}: BtnProps) => {
                 src="/assets/images/icon-calculator.svg"
                 alt="arrow"
             />
-            <p>{label}</p>
+            <span>{label}</span>
         </button>
     );
 };
