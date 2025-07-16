@@ -76,18 +76,18 @@ export default function Home() {
     };
 
     return (
-        <div className="bg-(--clr-white) md:m-(--space-500) md:rounded-3xl  overflow-hidden">
+        <main className="bg-(--clr-white) md:m-(--space-500) md:rounded-3xl  overflow-hidden">
             <div className="flex flex-col lg:flex-row md:w-[43rem] lg:w-[63rem]">
                 {/* Calculator */}
                 <form
                     onSubmit={handleSubmit}
                     className="calculator-wrapper bg-(--clr-white) flex flex-col gap-y-(--space-300) px-(--space-300) py-(--space-400) md:p-(--space-500) md:gap-y-(--space-500) lg:flex-1">
-                    <div className="header flex flex-col justify-start gap-y-(--space-100)  md:justify-between md:flex-row">
+                    <header className="header flex flex-col justify-start gap-y-(--space-100)  md:justify-between md:flex-row">
                         <h1 className="text-(--clr-slate-900) text-(length:--fs-24) font-bold leading-(--lh-125)">
                             Mortgage Calculator
                         </h1>
                         <BtnLink clearAll={clearAll} />
-                    </div>
+                    </header>
 
                     {/* Inputs */}
                     <div className="flex flex-col gap-y-(--space-300)">
@@ -162,6 +162,6 @@ export default function Home() {
                     {result ? <Result result={result} /> : <EmptyResult />}
                 </div>
             </div>
-        </div>
+        </main>
     );
 }
